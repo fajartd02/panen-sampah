@@ -1,6 +1,7 @@
 import express from 'express';
 import { Auth } from '../controllers/Auth.js';
 import { User } from '../controllers/User.js';
+import { verifyToken } from '../middleware/verifyToken.js';
 const router = express.Router();
 
 // Declare Class
@@ -13,9 +14,10 @@ router.post("/auth/register", auth.register);
 router.delete("/auth/logout", auth.logout);
 
 // Users
-router.get("/users", user.getUsers);
+router.get("/users", verifyToken,user.getUsers);
 
-// Map
+// Get Token
+// router.get("/token", refreshToken);
 
 
 
