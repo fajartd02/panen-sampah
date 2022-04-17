@@ -1,0 +1,10 @@
+### REGISTER
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+   "name": "Fajar M. Hamka",
+   "email": "fajarmh@gmail.com",
+   "password": "123456",
+   "confPassword": "123456"
+}

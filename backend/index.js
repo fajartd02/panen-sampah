@@ -17,8 +17,8 @@ try {
     console.log(err);
 }
 
-app.use(router);
 app.use(express.json());
 app.use(cookieParser());
+app.use(router);
 
 app.listen(PORT, () => console.log("Server running at http://localhost:5000"));
