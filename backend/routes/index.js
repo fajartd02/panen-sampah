@@ -8,6 +8,7 @@ const auth = new Auth()
 // Auth
 router.get("/auth/login", auth.login);
 router.get("/auth/register", auth.register);
+router.get("/auth/logout", auth.logout);
 
 
 // Map

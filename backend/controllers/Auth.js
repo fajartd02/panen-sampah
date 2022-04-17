@@ -10,4 +10,10 @@ export class Auth {
             "msg": "register"
         });
     }
+
+    async logout(req, res) {
+        res.send({
+            "msg": "logout"
+        });
+    }
 }
