@@ -8,3 +8,6 @@ Content-Type: application/json
    "password": "123456",
    "confPassword": "123456"
 }
+
+### Get Users
+GET http://localhost:5000/users
