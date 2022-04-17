@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Bank Sampah Mekar",
+      "telp": "089213129219",
+      "address": "Karangmekar, Cimahi Tengah, Cimahi City, West Java 40523",
+      "gps": { "latitude": -6.882379, "longitude": 107.541936 },
+      "open_status": "10:00 - 20:00 WIB"
+    },
+    {
+      "id": 2,
+      "name": "Bank Sampah Florida",
+      "telp": "08123141241",
+      "address": "Kimia Farma Paint Bandung Pt., Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat",
+      "gps": { "latitude": -6.907547, "longitude": 107.603505 },
+      "open_status": "09:00 - 21:00 WIB"
+    },
+    {
+      "id": 3,
+      "name": "Bank Sampah Kecamatan Bandung",
+      "telp": "085356338695",
+      "address": " Jl. Holis No.210 A Bandung Kulon Bandung Jawa Barat",
+      "gps": { "latitude": -6.925759637137505, "longitude": 107.5745785103587 },
+      "open_status": "07:00 - 17:00 WIB"
+    },
+    {
+      "id": 4,
+      "name": "Bank Sampah Flamboyan",
+      "telp": "089510161043",
+      "address": "Komp Pln Ciateul GG.2 No.3 RT.02 RW.09 Kel. Ciateul Kec. Regol Kota Bandung",
+      "gps": { "latitude": -6.934241712765869, "longitude": 107.60985724017166 },
+      "open_status": "09:00 - 18:00 WIB"
+    },
+    {
+      "id": 5,
+      "name": "Bank Sampah DISBUDPAR",
+      "telp": "081398415852",
+      "address": "Jalan Ahmad Yani No 277 Bandung, Bandung Jawa Barat",
+      "gps": { "latitude": -6.9139392738395555, "longitude": 107.63342943656205 },
+      "open_status": "11:00 - 21:00 WIB"
+ 
+    }
+  ]
