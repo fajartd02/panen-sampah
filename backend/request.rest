@@ -9,5 +9,14 @@ Content-Type: application/json
    "confPassword": "123456"
 }
 
+### LOGIN
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+   "email": "fajarmh@gmail.com",
+   "password": "123456"
+}
+
 ### Get Users
 GET http://localhost:5000/users

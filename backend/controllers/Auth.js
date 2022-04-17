@@ -1,5 +1,6 @@
 import { Users } from "../models/UserModel.js";
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 export class Auth {
     async register(req, res) {
@@ -33,9 +34,34 @@ export class Auth {
     }
     
     async login(req, res) {
-        res.send({
-            "msg": "login"
-        });
+        try {
+            const user = await Users.findOne({ where:{ email: req.body.email } });
+            const match = bcrypt.compare(req.body.password, user.password);
+            if(!match) res.status(500).json({msg: "Password tidak sesuai!"});
+
+            const { id: userId, name, email } = user;
+            const accessToken = jwt.sign({userId, name, email}, process.env.ACCESS_TOKEN_SECRET, {
+                expiresIn: '30s'
+            });
+            const refreshToken = jwt.sign({userId, name, email}, process.env.REFRESH_TOKEN_SECRET, {
+                expiresIn: '1d'
+            });
+
+            await Users.update({refresh_token: refreshToken}, {
+                where: {
+                    id: userId
+                }
+            });
+
+            res.cookie('refreshToken', refreshToken, {
+                httpOnly: true,
+                maxAge: 24 * 3600 * 1000 // this mean 1 day
+            });
+
+            res.json({ accessToken });
+        } catch(err) {
+            res.status(404).json({msg: "Email tidak ditemukan!"});
+        }
     }
 
     async logout(req, res) {
