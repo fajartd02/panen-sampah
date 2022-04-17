@@ -65,8 +65,26 @@ export class Auth {
     }
 
     async logout(req, res) {
-        res.send({
-            "msg": "logout"
+        const refreshToken = req.cookies.refreshToken;
+        if(!refreshToken) res.sendStatus(204); // no content
+
+        const user = await Users.findOne({
+            where:{
+                refresh_token: refreshToken
+            }
         });
+
+        if(!user) res.sendStatus(204); // no content
+
+        const { id: userId } = user;
+
+        await Users.update({refresh_token: null}, {
+            where: {
+                id: userId
+            }
+        });
+
+        res.clearCookie('refreshToken');
+        return res.sendStatus(200); // OK
     }
 }

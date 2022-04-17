@@ -1,5 +1,6 @@
 import express from 'express';
 import { Auth } from '../controllers/Auth.js';
+import { refreshToken } from '../controllers/RefreshToken.js';
 import { User } from '../controllers/User.js';
 import { verifyToken } from '../middleware/verifyToken.js';
 const router = express.Router();
@@ -17,7 +18,7 @@ router.delete("/auth/logout", auth.logout);
 router.get("/users", verifyToken,user.getUsers);
 
 // Get Token
-// router.get("/token", refreshToken);
+router.get("/token", refreshToken);
 
 
 
