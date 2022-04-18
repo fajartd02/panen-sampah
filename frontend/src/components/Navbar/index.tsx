@@ -14,9 +14,9 @@ function Navbar() {
                 <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">Home</a></li> </Link>
                 <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
                 <Link to="/shop" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Shop</a></li> </Link>
-                <li className="nav-item"><a className="nav-link" href="about.html">About</a></li>
-                <li className="nav-item"><a className="nav-link" href="login.html">Login</a></li>
-                <li className="nav-item"><button onClick={()=> "location.href='signup.html'" } className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li>
+                <Link to="/about"><li className="nav-item"><a className="nav-link">About</a></li></Link>
+                <Link to="/login"><li className="nav-item"><a className="nav-link">Login</a></li></Link>
+                <Link to="/register"><li className="nav-item"><button onClick={()=> "location.href='signup.html'" } className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li></Link>
             </ul>
         </div>
     </div>

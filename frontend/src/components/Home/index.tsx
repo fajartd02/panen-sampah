@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 import Navbar from "../Navbar";
 import Highlight from "./Highlight";
 import Subscribe from "./Subscribe";
@@ -11,6 +12,7 @@ function Home() {
       <Highlight />
       <Testimonials />
       <Subscribe />
+      <Footer />
     </>
   );
 }
