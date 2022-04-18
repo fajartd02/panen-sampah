@@ -8,6 +8,7 @@ import Highlight from "./Highlight";
 import StepSend from "./StepSend";
 import Subscribe from "./Subscribe";
 import Testimonials from "./Testimonials";
+import TitleMap from "./TitleMap";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <StepSend />
       <Benefit />
       <Awardee />
+      <TitleMap />
       <Testimonials />
       <Subscribe />
       <Footer />

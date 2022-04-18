@@ -7,8 +7,10 @@ function Map() {
     <>
       <Navbar />
       <div className="container text-center">
-        <h1 className="fs-1 fw-bold" style={{paddingTop: '2%', color: '#e65f52'}}>Map Distribution</h1>
-        <MapBox width="50vw" height="50vh" />
+        <h1 className="fs-1 fw-bold" style={{marginTop: '10%', color: '#e65f52'}}>Map Distribution</h1>
+        <div className="center" style={{margin: '2% 20%'}}>
+          <MapBox width="50vw" height="50vh" />
+        </div>
       </div>
     </>
   );

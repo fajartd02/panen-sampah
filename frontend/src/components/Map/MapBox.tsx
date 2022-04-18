@@ -15,7 +15,7 @@ function MapBox(props: MapInterface) {
         center={[-0.789275, 113.921326]}
         zoom={4}
         scrollWheelZoom={true}
-        style={{ width: width, height: height, margin: '5% auto' }}
+        style={{ width: width, height: height}}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
