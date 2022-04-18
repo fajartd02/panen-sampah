@@ -58,7 +58,7 @@ function Dashboard() {
 
   return (
     <div className='container mt-5'>
-      <h1>Welcome Back: {name}</h1>
+      <h1 className='is-size-1 has-text-centered'>Welcome Back Admin {name}</h1>
       <button onClick={getUsers} className='button is-info'>Get Users</button>
       <table className='table is-striped is-fullwidth'>
         <thead>

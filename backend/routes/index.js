@@ -1,5 +1,6 @@
 import express from 'express';
 import { Auth } from '../controllers/Auth.js';
+import { addCarts, solvedCarts } from '../controllers/Carts.js';
 import { refreshToken } from '../controllers/RefreshToken.js';
 import { User } from '../controllers/User.js';
 import { verifyToken } from '../middleware/verifyToken.js';
@@ -15,12 +16,14 @@ router.post("/auth/register", auth.register);
 router.delete("/auth/logout", auth.logout);
 
 // Users
-router.get("/users", verifyToken,user.getUsers);
+router.get("/users", verifyToken, user.getUsers);
 
 // Get Token
 router.get("/token", refreshToken);
 
-
+// CREATE Carts
+router.post("/carts/add", addCarts);
+router.put("/carts/solved/:id", solvedCarts);
 
 
 export default router;

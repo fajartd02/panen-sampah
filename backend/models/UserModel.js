@@ -14,6 +14,12 @@ export const Users = db.define('users', {
     },
     refresh_token: {
         type: DataTypes.TEXT
+    },
+    money: {
+        type: DataTypes.DECIMAL
+    },
+    emas: {
+        type: DataTypes.DECIMAL
     }
 }, {
     freezeTableName: true

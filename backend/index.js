@@ -4,6 +4,8 @@ import router from './routes/index.js';
 import cookieParser from 'cookie-parser';
 import db from './config/Database.js';
 import cors from "cors";
+import { Carts } from './models/CartModel.js';
+import { Users } from './models/UserModel.js';
 // import { Users } from './models/UserModel.js';
 
 dotenv.config();
@@ -13,12 +15,13 @@ const PORT = 5000;
 try {
     await db.authenticate();
     console.log("Database connected");
+    // await Carts.sync();
     // await Users.sync();
 } catch(err) {
     console.log(err);
 }
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: ['http://localhost:3000', 'http://localhost:4000'] }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(router);

@@ -20,10 +20,26 @@ Content-Type: application/json
 
 ### Get Users
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYWphciBNLiBIYW1rYSIsImVtYWlsIjoiZmFqYXJtaEBnbWFpbC5jb20iLCJpYXQiOjE2NTAyMDQyNjksImV4cCI6MTY1MDIwNDI5OX0.sQHGa4_8GfPhTVO9vbmfBlFYJe8ExflFqNOnqdV4hXc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYWphciBNLiBIYW1rYSIsImVtYWlsIjoiZmFqYXJtaEBnbWFpbC5jb20iLCJpYXQiOjE2NTAyOTMyODEsImV4cCI6MTY1MDI5MzMxMX0.FHX2DVE0-3iNXHZHgCg2ym8OeOR5-0OCVpGP6yHLFbk
 
 ### GET TOKEN
 GET http://localhost:5000/token
 
 ### LOGOUT
 DELETE http://localhost:5000/auth/logout
+
+
+### ADD CART
+POST http://localhost:5000/carts/add
+Content-Type: application/json
+
+{
+   "buyer_id": 1,
+   "plastic": 2,
+   "skincare": 1,
+   "kaca": 0,
+   "status": "unsolved"
+}
+
+### UPDATE
+PUT http://localhost:5000/carts/solved/2
