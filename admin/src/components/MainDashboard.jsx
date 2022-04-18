@@ -1,12 +1,14 @@
 import React from 'react'
-import Dashboard from './Dashboard'
+import CheckoutItem from './CheckoutItem'
+// import Dashboard from './Dashboard'
 import Navbar from './Navbar'
 
 function MainDashboard() {
   return (
     <>
         <Navbar />
-        <Dashboard />
+        <CheckoutItem />
+        {/* <Dashboard /> */}
     </>
   )
 }

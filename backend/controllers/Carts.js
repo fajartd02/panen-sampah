@@ -86,7 +86,7 @@ export const viewCarts = async (req, res) => {
     try {
 
         const carts = await Carts.findAll({
-            attributes: ['id', 'buyer_id', 'kaca', 'plastic', 'skincare', 'status']
+            attributes: ['id', 'buyer_id', 'buyer_name','kaca', 'plastic', 'skincare', 'status']
         });
 
 

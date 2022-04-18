@@ -40,7 +40,7 @@ Content-Type: application/json
 }
 
 ### UPDATE <pake id>
-PUT http://localhost:5000/carts/solved/2
+PUT http://localhost:5000/carts/solved/8
 
 ### GET DATA USERS CARTS
 GET http://localhost:5000/carts
