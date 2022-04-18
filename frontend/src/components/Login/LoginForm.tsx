@@ -91,7 +91,7 @@ function LoginForm() {
                 </form>
               </div>
             </div>
-            <div className="mt-5 text-muted text-center">
+            <div className="mt-3 text-muted text-center">
               {" "}
               Don't have an account?{" "}
               <a
@@ -101,7 +101,7 @@ function LoginForm() {
                 Create One
               </a>
             </div>
-            <div className="pt-5 text-center"> Copyright © 2022 Panen Sampah </div>
+            <div className="pt-4 text-center"> Copyright © 2022 Panen Sampah </div>
           </div>
         </div>
       </div>

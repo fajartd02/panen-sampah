@@ -3,6 +3,7 @@ import Map from "./components/Map/Map";
 import React from "react";
 import Home from './components/Home';
 import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
 
     </div>
