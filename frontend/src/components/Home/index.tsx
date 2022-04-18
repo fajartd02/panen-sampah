@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import Awardee from "./Awardee";
 import Benefit from "./Benefit";
 import Convincing from "./Convincing";
 import Highlight from "./Highlight";
@@ -16,6 +17,7 @@ function Home() {
       <Convincing />
       <StepSend />
       <Benefit />
+      <Awardee />
       <Testimonials />
       <Subscribe />
       <Footer />
