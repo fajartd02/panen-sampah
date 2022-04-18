@@ -50,9 +50,9 @@ function Register() {
                                 </form>
                             </div>
                         </div>
-                        <div className="mt-3 text-muted text-center"> Already have an account? <a href="login.html"  style={{color: "#F0968D", textDecoration: 'underline'}}>Log in</a>
+                        <div className="mt-1 text-muted text-center"> Already have an account? <a href="login.html"  style={{color: "#F0968D", textDecoration: 'underline'}}>Log in</a>
                         </div>
-                        <div className="text-center pt-4"> Copyright © 2022 Panen Sampah </div>
+                        <div className="text-center pt-4 pb-4"> Copyright © 2022 Panen Sampah </div>
                     </div>
                 </div>
             </div>
