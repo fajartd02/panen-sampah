@@ -6,6 +6,9 @@ export const Carts = db.define('carts', {
     buyer_id: {
         type: DataTypes.INTEGER
     },
+    buyer_name:{
+        type: DataTypes.STRING
+    },
     plastic: {
         type: DataTypes.DECIMAL
     },

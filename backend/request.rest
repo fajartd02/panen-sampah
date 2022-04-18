@@ -34,12 +34,13 @@ POST http://localhost:5000/carts/add
 Content-Type: application/json
 
 {
-   "buyer_id": 1,
    "plastic": 2,
-   "skincare": 1,
-   "kaca": 0,
-   "status": "unsolved"
+   "skincare": 4,
+   "kaca": 5
 }
 
-### UPDATE
+### UPDATE <pake id>
 PUT http://localhost:5000/carts/solved/2
+
+### GET DATA USERS CARTS
+GET http://localhost:5000/carts

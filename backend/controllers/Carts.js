@@ -16,15 +16,17 @@ export const addCarts = async (req, res) => {
         if(!user) {
             return res.sendStatus(403);
         }
-        const { id: userId } = user;
-        const { plastic, skincare, kaca, status } = req.body;
+        const { id: userId, name } = user;
+        const { plastic, skincare, kaca } = req.body;
 
+        const stats = "unsolved";
         await Carts.create({
             buyer_id: userId,
+            buyer_name: name,
             plastic: plastic,
             skincare: skincare,
             kaca: kaca,
-            status: status
+            status: stats
         });
         res.status(200).json({msg: "Berhasil checkout barang!"});
 
@@ -74,6 +76,21 @@ export const solvedCarts = async (req, res) => {
         })
 
         res.status(200).json({msg: "Berhasil menukar dengan uang!"});
+
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+export const viewCarts = async (req, res) => {
+    try {
+
+        const carts = await Carts.findAll({
+            attributes: ['id', 'buyer_id', 'kaca', 'plastic', 'skincare', 'status']
+        });
+
+
+        res.json(carts);
 
     } catch(err) {
         console.log(err);
