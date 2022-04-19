@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
@@ -36,7 +37,7 @@ function ServiceSection(props: ServiceSectionInterface) {
             >
               <img
                 className="rounded img-fluid shadow"
-                src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                src="assets/img/1.jpg"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -48,9 +49,14 @@ function ServiceSection(props: ServiceSectionInterface) {
                   Erat netus est hendrerit, nullam et quis ad cras porttitor
                   iaculis. Bibendum vulputate cras aenean.
                 </p>
-                <button className="btn btn-primary shadow" type="button">
-                  Learn more
-                </button>
+                <Link to="/map">
+                  <a
+                    className="btn btn-primary shadow text-white"
+                    type="button"
+                  >
+                    Learn map
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -64,7 +70,7 @@ function ServiceSection(props: ServiceSectionInterface) {
             >
               <img
                 className="rounded img-fluid shadow"
-                src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                src="assets/img/2.jpg"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -74,9 +80,14 @@ function ServiceSection(props: ServiceSectionInterface) {
                   Erat netus est hendrerit, nullam et quis ad cras porttitor
                   iaculis. Bibendum vulputate cras aenean.
                 </p>
-                <button className="btn btn-primary shadow" type="button">
-                  Learn more
-                </button>
+                <Link to="/sampah">
+                  <a
+                    className="btn btn-primary shadow text-white"
+                    type="button"
+                  >
+                    Kirim Sampah
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -90,7 +101,7 @@ function ServiceSection(props: ServiceSectionInterface) {
             >
               <img
                 className="rounded img-fluid shadow"
-                src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                src="assets/img/3.jpg"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -100,9 +111,14 @@ function ServiceSection(props: ServiceSectionInterface) {
                   Erat netus est hendrerit, nullam et quis ad cras porttitor
                   iaculis. Bibendum vulputate cras aenean.
                 </p>
-                <button className="btn btn-primary shadow" type="button">
-                  Learn more
-                </button>
+                <Link to="/profile">
+                  <a
+                    className="btn btn-primary shadow text-white"
+                    type="button"
+                  >
+                    Check Profile
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -116,7 +132,7 @@ function ServiceSection(props: ServiceSectionInterface) {
             >
               <img
                 className="rounded img-fluid shadow"
-                src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                src="assets/img/4.jpg"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -142,7 +158,7 @@ function ServiceSection(props: ServiceSectionInterface) {
             >
               <img
                 className="rounded img-fluid shadow"
-                src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
+                src="assets/img/5.jpg"
               />
             </div>
             <div className="col d-md-flex align-items-md-end align-items-lg-center mb-5">
@@ -152,9 +168,14 @@ function ServiceSection(props: ServiceSectionInterface) {
                   Erat netus est hendrerit, nullam et quis ad cras porttitor
                   iaculis. Bibendum vulputate cras aenean.
                 </p>
-                <button className="btn btn-primary shadow" type="button">
-                  Learn more
-                </button>
+                <Link to="/emas">
+                  <a
+                    className="btn btn-primary shadow text-white"
+                    type="button"
+                  >
+                    Tukar
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

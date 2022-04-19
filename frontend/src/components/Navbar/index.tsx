@@ -262,7 +262,7 @@ function Navbar(props: NavbarInterface) {
                         &nbsp;Dashboard
                       </a>
                     </Link>
-                    <Link to="/shop">
+                    <Link to="#">
                       <a className="dropdown-item">
                         <i className="fas fa-dollar-sign fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Tukar tunai
