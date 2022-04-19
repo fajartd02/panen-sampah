@@ -14,7 +14,7 @@ function Map(props: MapInterface) {
       <Navbar username={username}/>
       <div className="container text-center">
         <h1 className="fs-1 fw-bold" style={{marginTop: '5%', color: '#e65f52'}}>Map Distribution</h1>
-        <div className="center" style={{margin: '2% 20%', marginBottom: '8%'}}>
+        <div className="d-flex justify-content-center" style={{margin: '2%', marginBottom: '14%'}}>
           <MapBox width="50vw" height="50vh" />
         </div>
       </div>
