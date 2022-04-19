@@ -1,11 +1,17 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
-function Contact() {
+interface ContactInterface {
+    username?: string
+}
+
+function Contact(props: ContactInterface) {
+  const { username } = props;
   return (
     <>
-      <Navbar />
+      <Navbar username={username}/>
       <section className="py-5 mt-5" style={{marginTop: '0px !important'}}>
         <div className="container py-5">
             <div className="row mb-5">

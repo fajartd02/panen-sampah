@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom'
 
 interface NavbarInterface {
   username?: string
@@ -7,6 +9,42 @@ interface NavbarInterface {
 
 function Navbar(props: NavbarInterface) {
   const { username } = props;
+  const navigate = useNavigate();
+
+  const logout = async() => {
+    try{
+      await axios.delete('http://localhost:5000/auth/logout');
+      navigate('/login');
+    } catch(err) {
+      console.log('error internal');
+      navigate('/');
+    }
+  }
+
+  if(username === '') {
+    return (
+    <nav className="navbar navbar-light navbar-expand-lg fixed-top py-3">
+    <div className="container">
+        <a className="navbar-brand logo js-scroll-trigger" href="#"><img src="assets/img/logo-full.png" style={{height: '47px'}} /></a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        <div id="navbarTogglerDemo02" className="collapse navbar-collapse">
+            <ul className="navbar-nav ms-auto">
+                <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">Home</a></li> </Link>
+                <Link to="/service" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Services</a></li> </Link>
+                <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
+                <Link to="/shop" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Shop</a></li> </Link>
+                <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Contact</a></li></Link>
+                <Link to="/login" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Login</a></li></Link>
+                <Link to="/register" style={{textDecoration: 'none'}}><li className="nav-item"><button className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li></Link>
+            </ul>
+        </div>
+    </div>
+</nav>
+)
+  }
+
   return (
     <nav className="navbar navbar-light navbar-expand-lg fixed-top py-3">
     <div className="container">
@@ -16,14 +54,13 @@ function Navbar(props: NavbarInterface) {
           </button>
         <div id="navbarTogglerDemo02" className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
-                <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">{username}</a></li> </Link>
                 <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">Home</a></li> </Link>
                 <Link to="/service" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Services</a></li> </Link>
                 <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
                 <Link to="/shop" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Shop</a></li> </Link>
                 <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Contact</a></li></Link>
-                <Link to="/login" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Login</a></li></Link>
-                <Link to="/register" style={{textDecoration: 'none'}}><li className="nav-item"><button className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li></Link>
+                <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">{username}</a></li></Link>
+                <li><button onClick={logout} className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Logout</button></li>
             </ul>
         </div>
     </div>

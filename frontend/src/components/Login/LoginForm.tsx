@@ -8,13 +8,14 @@ function LoginForm() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const login = async() => {
+  const login = async(e: any) => {
+    e.preventDefault();
     try{
       await axios.post('http://localhost:5000/auth/login', {
         email: email,
         password: password
       });
-
+      
       navigate('/');
     } catch(err) {
       console.log(err);
