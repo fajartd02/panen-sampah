@@ -6,7 +6,7 @@ function Convincing() {
             <div className="container py-4 py-xl-5">
             <div className="row gy-4 gy-md-0" style={{paddingTop: '48px', paddingBottom: '48px'}}>
                 <div className="col-md-6">
-                    <div className="p-xl-5 m-xl-5"><img className="rounded img-fluid w-100 fit-cover" style={{minHeight: '300px'}} src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt='fto'/></div>
+                    <div className="p-xl-5 m-xl-5"><img className="rounded img-fluid w-100 fit-cover" style={{minHeight: '300px'}} src="assets/img/recycle.jpg" alt='fto'/></div>
                 </div>
                 <div className="col-md-6 d-md-flex align-items-md-center">
                     <div style={{maxWidth: '350px'}}>

@@ -12,7 +12,7 @@ import Shop from './components/Shop';
 import Sampah from './components/Sampah';
 import SuccessCheckout from './components/SuccessCheckout';
 import Profile from './components/Profile';
-import Emas from './components/Emas/indes';
+import Emas from './components/Emas';
 function App() {
   const [id, setId] = useState(0);
   const [name, setName] = useState('');
@@ -69,7 +69,7 @@ function App() {
       <Routes>
         <Route path="/map" element={<Map username={name}/>} />
         <Route path="/" element={<Home username={name}/>} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact username={name}/>} />
         <Route path="/service" element={<ServiceSection username={name}/>} />

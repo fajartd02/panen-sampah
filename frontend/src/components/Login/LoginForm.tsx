@@ -127,7 +127,7 @@ function LoginForm() {
               {" "}
               Don't have an account?{" "}
               <Link to="/register">
-                <a
+                <a href="/register"
                   style={{ color: "#F0968D", textDecoration: "underline" }}
                 >
                   Create One

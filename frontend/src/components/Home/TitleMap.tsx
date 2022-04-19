@@ -8,8 +8,8 @@ function TitleMap() {
         <div className="container py-5">
             <div className="row mb-5">
                 <div className="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 className="fw-bold"><strong>Dimana kamu menemukan kami</strong></h2>
-                    <p className="text-muted w-lg-50">No matter the project, our team can handle it.&nbsp;</p>
+                    <h2 className="fw-bold"><strong>Mana yang paling dekat denganmu!</strong></h2>
+                    <p className="text-muted w-lg-50">Lokasi mitra bank sampah kami tersebar di berbagai daerah.</p>
                 </div>
             </div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
