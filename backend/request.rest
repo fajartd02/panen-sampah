@@ -20,7 +20,7 @@ Content-Type: application/json
 
 ### Get Users
 GET http://localhost:5000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYWphciBNLiBIYW1rYSIsImVtYWlsIjoiZmFqYXJtaEBnbWFpbC5jb20iLCJpYXQiOjE2NTAyOTMyODEsImV4cCI6MTY1MDI5MzMxMX0.FHX2DVE0-3iNXHZHgCg2ym8OeOR5-0OCVpGP6yHLFbk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJGYWphciBNLiBIYW1rYSIsImVtYWlsIjoiZmFqYXJtaEBnbWFpbC5jb20iLCJpYXQiOjE2NTAzNjg5OTcsImV4cCI6MTY1MDM2OTAyN30.uLifLjpfiUhVgZDeiJYH4rzuG-KR5IfSnENBUF50Axs
 
 ### GET TOKEN
 GET http://localhost:5000/token

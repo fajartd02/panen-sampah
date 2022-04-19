@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+interface NavbarInterface {
+  username?: string
+}
+
+function Navbar(props: NavbarInterface) {
+  const { username } = props;
   return (
     <nav className="navbar navbar-light navbar-expand-lg fixed-top py-3">
     <div className="container">
@@ -11,6 +16,7 @@ function Navbar() {
           </button>
         <div id="navbarTogglerDemo02" className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
+                <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">{username}</a></li> </Link>
                 <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">Home</a></li> </Link>
                 <Link to="/service" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Services</a></li> </Link>
                 <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
