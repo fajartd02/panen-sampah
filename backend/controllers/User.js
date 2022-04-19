@@ -17,7 +17,7 @@ export class User {
     async getUsersInfo(req, res) {
         try {
             const { id } = req.params;
-            const user = await user.findOne({
+            const user = await Users.findOne({
                 where:{
                     id: id
                 }
