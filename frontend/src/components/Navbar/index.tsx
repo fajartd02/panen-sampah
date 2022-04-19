@@ -256,7 +256,7 @@ function Navbar(props: NavbarInterface) {
                     />
                   </a>
                   <div className="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                    <Link to="/shop">
+                    <Link to="/profile">
                       <a className="dropdown-item">
                         <i className="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Dashboard
@@ -268,7 +268,7 @@ function Navbar(props: NavbarInterface) {
                         &nbsp;Tukar tunai
                       </a>
                     </Link>
-                    <Link to="/emas">
+                    <Link to="/shop">
                       <a className="dropdown-item">
                         <i className="fas fa-coins fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Tukar emas
