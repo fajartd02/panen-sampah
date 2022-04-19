@@ -12,11 +12,12 @@ function Navbar() {
         <div id="navbarTogglerDemo02" className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
                 <Link to="/" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link active">Home</a></li> </Link>
+                <Link to="/service" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Services</a></li> </Link>
                 <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
                 <Link to="/shop" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Shop</a></li> </Link>
                 <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Contact</a></li></Link>
                 <Link to="/login" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Login</a></li></Link>
-                <Link to="/register" style={{textDecoration: 'none'}}><li className="nav-item"><button onClick={()=> "location.href='signup.html'" } className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li></Link>
+                <Link to="/register" style={{textDecoration: 'none'}}><li className="nav-item"><button className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Sign Up</button></li></Link>
             </ul>
         </div>
     </div>

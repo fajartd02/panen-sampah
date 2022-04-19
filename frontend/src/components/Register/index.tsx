@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Register() {
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confPassword, setConfPassword] = useState('');
+
   return (
     <section className="section">
             <div className="container mt-5">
@@ -38,6 +45,16 @@ function Register() {
                                             <div className="label"></div>
                                         </div>
                                     </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="confPassword" className="d-block" style={{fontSize: '16px'}}>Confirm Password</label>
+                                        <input style={{fontSize: '16px'}} id="password" type="password" className="form-control pwstrength" data-indicator="pwindicator" name="confPassword" />
+                                        <div id="pwindicator" className="pwindicator">
+                                            <div className="bar"></div>
+                                            <div className="label"></div>
+                                        </div>
+                                    </div>
+                                    
                                     <div className="form-group">
                                         <div className="custom-control custom-checkbox">
                                             <input type="checkbox" name="agree" className="custom-control-input" id="agree" />

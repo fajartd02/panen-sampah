@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
@@ -13,7 +14,12 @@ function LoginForm() {
             </div>
             <div className="card card-primary p-3">
               <div className="card-body">
-                <h5 className="card-title pb-4 mt-2 font-weight-light text-danger" style={{fontSize: '16px'}}>Login</h5>
+                <h5
+                  className="card-title pb-4 mt-2 font-weight-light text-danger"
+                  style={{ fontSize: "16px" }}
+                >
+                  Login
+                </h5>
                 <form method="POST" action="#" className="needs-validation">
                   <div className="form-group">
                     <label htmlFor="email" style={{ fontSize: "16px" }}>
@@ -94,14 +100,18 @@ function LoginForm() {
             <div className="mt-3 text-muted text-center">
               {" "}
               Don't have an account?{" "}
-              <a
-                href="signup.html"
-                style={{ color: "#F0968D", textDecoration: "underline" }}
-              >
-                Create One
-              </a>
+              <Link to="/register">
+                <a
+                  style={{ color: "#F0968D", textDecoration: "underline" }}
+                >
+                  Create One
+                </a>
+              </Link>
             </div>
-            <div className="pt-4 text-center"> Copyright © 2022 Panen Sampah </div>
+            <div className="pt-4 text-center">
+              {" "}
+              Copyright © 2022 Panen Sampah{" "}
+            </div>
           </div>
         </div>
       </div>
