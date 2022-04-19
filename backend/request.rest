@@ -14,7 +14,7 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-   "email": "fajarmh@gmail.com",
+   "email": "julian@gmail.com",
    "password": "123456"
 }
 
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 {
    "plastic": 3,
-   "skincare": 0,
+   "skincare": 1,
    "kaca": 1
 }
 

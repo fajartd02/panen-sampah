@@ -23,6 +23,7 @@ function Profile(props: ProfileInterface) {
     money: 0,
     emas: 0,
   });
+  const [statusItem, setStatusItem] = useState([]);
 
   const getUserInfo = async () => {
     const response = await axios.get("http://localhost:5000/token");
@@ -36,8 +37,27 @@ function Profile(props: ProfileInterface) {
     setUser(response2.data);
   };
 
+  const viewStatus = async() => {
+        const res = await axios.get("http://localhost:5000/token");
+        const decoded: User = jwt_decode(res.data.accessToken);
+        const { userId } = decoded;
+
+        const response = await axios.get('http://localhost:5000/carts');
+        const { data } = response;
+        const itemArray: any = [];
+        for(let i = 0; i < data.length; i++) {
+            if(data[i].buyer_id === userId) {
+                itemArray.push(data[i]);
+            } else {
+                continue;
+            }
+        }
+        setStatusItem(itemArray);
+  }
+
   useEffect(() => {
     getUserInfo();
+    viewStatus();
   }, []);
   const img_emas = "assets/img/emas.jpg";
   const img_sampah = "assets/img/sampah_money.png";
@@ -80,6 +100,34 @@ function Profile(props: ProfileInterface) {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container">
+          <table className="table">
+              <thead>
+                    <tr>
+                        <th scope="col">No Pemesanan</th>
+                        <th scope="col">Kaca Skincare</th>
+                        <th scope="col">Plastik Skincare</th>
+                        <th scope="col">Kardus Skincare</th>
+                        <th scope="col">Status Barang</th>
+                    </tr>
+              </thead>
+              <tbody>
+              {statusItem.map((item: any) => (
+                <>
+                    <tr>
+                        <th scope="row">{item.id}</th>
+                        <td>{item.kaca} unit</td>
+                        <td>{item.plastic} unit</td>
+                        <td>{item.skincare} unit</td>
+                        {item.status === 'solved'? <td>Barang sudah sampai</td> : <td>Sedang dalam perjalanan</td>}
+                    </tr>
+                </>
+            ))}
+              </tbody>
+          </table>
+            
       </div>
       <div style={{ marginBottom: "10%" }}></div>
       <Footer />
