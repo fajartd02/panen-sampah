@@ -48,10 +48,10 @@ npm run start
 ```
 7. For user web apps, open your browser and paste it
 ```
-http://localhost:3000/  <!-- paste it in your browser -->
+http://localhost:3000/  <!-- paste the local host into your browser -->
 ```
 8. For admin web apps, open your browser and paste it
 ```
-http://localhost:4000/  <!-- paste it in your browser -->
+http://localhost:4000/  <!-- paste the local host into your browser -->
 ```
 9. Enjoy the apps.
