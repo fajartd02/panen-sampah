@@ -11,6 +11,7 @@ import ServiceSection from './components/ServiceSection';
 import Shop from './components/Shop';
 import Sampah from './components/Sampah';
 import SuccessCheckout from './components/SuccessCheckout';
+import Profile from './components/Profile';
 function App() {
   const [id, setId] = useState(0);
   const [name, setName] = useState('');
@@ -74,6 +75,7 @@ function App() {
         <Route path="/shop" element={<Shop username={name}/>} />
         <Route path="/sampah" element={<Sampah username={name}/>} />
         <Route path="/successcheckout" element={<SuccessCheckout username={name}/>} />
+        <Route path="/profile" element={<Profile username={name}/>} />
       </Routes>
 
     </div>

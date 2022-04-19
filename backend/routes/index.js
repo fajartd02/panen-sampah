@@ -1,6 +1,7 @@
 import express from 'express';
 import { Auth } from '../controllers/Auth.js';
 import { addCarts, solvedCarts, viewCarts } from '../controllers/Carts.js';
+import { changeGold } from '../controllers/Gold.js';
 import { refreshToken } from '../controllers/RefreshToken.js';
 import { User } from '../controllers/User.js';
 import { verifyToken } from '../middleware/verifyToken.js';
@@ -28,6 +29,9 @@ router.put("/carts/solved/:id", solvedCarts);
 
 // view carts
 router.get('/carts', viewCarts);
+
+// tukar emas
+router.post('/emas', changeGold);
 
 
 export default router;
