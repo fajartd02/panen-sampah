@@ -59,7 +59,7 @@ function Navbar(props: NavbarInterface) {
                 <Link to="/map" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Map</a></li> </Link>
                 <Link to="/shop" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Shop</a></li> </Link>
                 <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">Contact</a></li></Link>
-                <Link to="/contact" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">{username}</a></li></Link>
+                <Link to="/profile" style={{textDecoration: 'none'}}><li className="nav-item"><a className="nav-link">{username}</a></li></Link>
                 <li><button onClick={logout} className="btn btn-primary shadow ms-2" type="button" style={{fontSize: '16px', paddingRight: '20px', paddingLeft: '20px'}}>Logout</button></li>
             </ul>
         </div>
