@@ -15,13 +15,6 @@ interface User {
   exp: any;
 }
 
-type userObject = {
-  name: string;
-  email: string;
-  money: number;
-  emas: number;
-};
-
 function Profile(props: ProfileInterface) {
   const { username } = props;
   const [user, setUser] = useState({

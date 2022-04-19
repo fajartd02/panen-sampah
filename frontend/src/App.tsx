@@ -12,6 +12,7 @@ import Shop from './components/Shop';
 import Sampah from './components/Sampah';
 import SuccessCheckout from './components/SuccessCheckout';
 import Profile from './components/Profile';
+import Emas from './components/Emas/indes';
 function App() {
   const [id, setId] = useState(0);
   const [name, setName] = useState('');
@@ -76,6 +77,7 @@ function App() {
         <Route path="/sampah" element={<Sampah username={name}/>} />
         <Route path="/successcheckout" element={<SuccessCheckout username={name}/>} />
         <Route path="/profile" element={<Profile username={name}/>} />
+        <Route path="/emas" element={<Emas username={name}/>} />
       </Routes>
 
     </div>

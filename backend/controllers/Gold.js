@@ -16,16 +16,19 @@ export const changeGold = async(req, res) => {
             if(!user) {
             return res.sendStatus(403);
         }
-        let { id: userId, emas } = user;
+        let { id: userId, emas, money } = user;
 
         if(emas === null) emas = 0;
 
         let totalChange = (total * 0.025);
         totalChange += parseFloat(emas);
 
-        await Users.update({emas: totalChange}, {
+        let updateMoney = parseFloat(money);
+        updateMoney -= (total * 40000);
+
+        await Users.update({emas: totalChange, money: updateMoney}, {
             where: {
-                id: userId
+                id: userId,
             }
         });
         res.json({msg: "Berhasil tukar!"});
