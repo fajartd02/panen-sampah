@@ -17,6 +17,7 @@ router.delete("/auth/logout", auth.logout);
 
 // Users
 router.get("/users", verifyToken, user.getUsers);
+router.get("/users/:id", user.getUsersInfo);
 
 // Get Token
 router.get("/token", refreshToken);

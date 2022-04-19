@@ -13,4 +13,19 @@ export class User {
             res.status(500).json({msg: "Internal server error"});
         }
     }
+
+    async getUsersInfo(req, res) {
+        try {
+            const { id } = req.params;
+            const user = await user.findOne({
+                where:{
+                    id: id
+                }
+            });
+            res.json(user);
+        } catch(err) {
+            console.log(err);
+            res.status(500).json({msg: "error internal"});
+        }
+    }
 }
