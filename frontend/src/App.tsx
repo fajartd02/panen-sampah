@@ -9,7 +9,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import ServiceSection from './components/ServiceSection';
 import Shop from './components/Shop';
-
+import Sampah from './components/Sampah';
 function App() {
   const [id, setId] = useState(0);
   const [name, setName] = useState('');
@@ -71,6 +71,7 @@ function App() {
         <Route path="/contact" element={<Contact username={name}/>} />
         <Route path="/service" element={<ServiceSection username={name}/>} />
         <Route path="/shop" element={<Shop username={name}/>} />
+        <Route path="/sampah" element={<Sampah username={name}/>} />
       </Routes>
 
     </div>

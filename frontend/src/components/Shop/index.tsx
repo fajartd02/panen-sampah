@@ -27,8 +27,8 @@ function Shop(props: ShopInterface) {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <Link to="/emas" style={{ color: "white" }}>
-                  <a className="btn btn-primary">Beli Emas</a>
+                <Link to="/sampah" style={{ color: "white" }}>
+                  <a className="btn btn-primary">Tukar Sampah</a>
                 </Link>
               </div>
             </div>
@@ -52,7 +52,11 @@ function Shop(props: ShopInterface) {
         </div>
       </div>
 
-      {/* <Footer /> */}
+    <div style={{marginBottom: '15%'}}>
+
+    </div>
+
+      <Footer />
     </>
   );
 }
