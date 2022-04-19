@@ -3,8 +3,8 @@ POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
-   "name": "Fajar M. Hamka",
-   "email": "fajarmh@gmail.com",
+   "name": "Admin",
+   "email": "admin@gmail.com",
    "password": "123456",
    "confPassword": "123456"
 }
@@ -37,13 +37,22 @@ POST http://localhost:5000/carts/add
 Content-Type: application/json
 
 {
-   "plastic": 2,
-   "skincare": 4,
-   "kaca": 5
+   "plastic": 3,
+   "skincare": 0,
+   "kaca": 1
 }
 
 ### UPDATE <pake id>
-PUT http://localhost:5000/carts/solved/8
+PUT http://localhost:5000/carts/solved/3
 
 ### GET DATA USERS CARTS
 GET http://localhost:5000/carts
+
+
+### TUKAR TOKENN
+POST http://localhost:5000/emas
+Content-Type: application/json
+
+{
+   "total": 1
+}

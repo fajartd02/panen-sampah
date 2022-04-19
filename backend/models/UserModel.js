@@ -19,7 +19,7 @@ export const Users = db.define('users', {
         type: DataTypes.DECIMAL
     },
     emas: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.FLOAT
     }
 }, {
     freezeTableName: true
