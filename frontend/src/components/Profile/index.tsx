@@ -85,14 +85,13 @@ function Profile(props: ProfileInterface) {
                         </div>
                       </div>
                       <div className="col-auto">
-                        <Link to="/shop">
-                          <button
-                            className="btn btn-primary shadow btn-sm mr-3"
-                            type="button"
-                          >
-                            Lebih lanjut
-                          </button>
-                        </Link>
+                        <a
+                          className="btn btn-primary shadow btn-sm mr-3"
+                          type="button"
+                          href="/shop"
+                        >
+                          Lebih lanjut
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -119,14 +118,14 @@ function Profile(props: ProfileInterface) {
                         >
                           Tukar tunai
                         </button>
-                        <Link to="/shop">
-                          <a
-                            className="btn btn-primary shadow btn-sm mr-3 text-white"
-                            type="button"
-                          >
-                            Tukar emas
-                          </a>
-                        </Link>
+
+                        <a
+                          href="/shop"
+                          className="btn btn-primary shadow btn-sm mr-3 text-white"
+                          type="button"
+                        >
+                          Tukar emas
+                        </a>
                       </div>
                     </div>
                   </div>

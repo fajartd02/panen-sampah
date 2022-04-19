@@ -256,26 +256,25 @@ function Navbar(props: NavbarInterface) {
                     />
                   </a>
                   <div className="dropdown-menu shadow dropdown-menu-end animated--grow-in">
-                    <Link to="/profile">
+                    <Link to="/profile" style={{textDecoration:'none'}}>
                       <a className="dropdown-item">
                         <i className="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Dashboard
                       </a>
                     </Link>
-                    <Link to="#">
+                    <Link to="#"  style={{textDecoration:'none'}}>
                       <a className="dropdown-item">
                         <i className="fas fa-dollar-sign fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Tukar tunai
                       </a>
                     </Link>
-                    <Link to="/shop">
-                      <a className="dropdown-item">
-                        <i className="fas fa-coins fa-sm fa-fw me-2 text-gray-400"></i>
-                        &nbsp;Tukar emas
-                      </a>
-                    </Link>
 
-                    <Link to="/sampah">
+                    <a className="dropdown-item text-yellow" href="/shop">
+                      <i className="fas fa-coins fa-sm fa-fw me-2 text-gray-400"></i>
+                      &nbsp;Tukar emas
+                    </a>
+
+                    <Link to="/sampah"  style={{textDecoration:'none'}}>
                       <a className="dropdown-item">
                         <i className="fas fa-truck fa-sm fa-fw me-2 text-gray-400"></i>
                         &nbsp;Kirim sampah
