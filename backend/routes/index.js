@@ -13,6 +13,7 @@ const user = new User();
 
 // Auth
 router.post("/auth/login", auth.login);
+router.post("/auth/login", auth.login);
 router.post("/auth/register", auth.register);
 router.delete("/auth/logout", auth.logout);
 
