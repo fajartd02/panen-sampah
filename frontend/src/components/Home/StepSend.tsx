@@ -87,6 +87,7 @@ function StepSend() {
                     </div>
                 </div>
             </div>
+        <button className="btn btn-primary shadow" type="button">Kirim Sampah</button>
         </div>
     </div>
   )

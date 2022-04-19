@@ -29,7 +29,6 @@ function Home(props: HomeInterface) {
       <Benefit />
       <Awardee />
       <TitleMap />
-      <Testimonials />
       <Subscribe />
       <Footer />
     </>
