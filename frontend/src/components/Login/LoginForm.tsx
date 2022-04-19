@@ -1,7 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function LoginForm() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const login = async() => {
+    try{
+      await axios.post('http://localhost:5000/auth/login', {
+        email: email,
+        password: password
+      });
+
+      navigate('/');
+    } catch(err) {
+      console.log(err);
+      setError('Password salah!');
+    }
+  }
+
   return (
     <section className="section">
       <div className="container mt-5">
@@ -27,6 +47,7 @@ function LoginForm() {
                     </label>
                     <input
                       style={{ fontSize: "16px" }}
+                      onChange={(e) => setEmail(e.target.value)}
                       id="email"
                       type="email"
                       className="form-control"
@@ -56,15 +77,18 @@ function LoginForm() {
                     <input
                       id="password"
                       type="password"
+                      onChange={(e) => setPassword(e.target.value)}
                       className="form-control"
                       name="password"
                       tabIndex={2}
                       required
                     />
-                    <div className="invalid-feedback">
-                      {" "}
-                      please fill in your password{" "}
-                    </div>
+                    <h5
+                    className="card-title font-weight-light text-danger text-center mt-2"
+                    style={{ fontSize: "16px" }}
+                  >
+                   {error}
+                 </h5>
                   </div>
                   <div className="form-group">
                     <div className="custom-control custom-checkbox">
@@ -89,6 +113,7 @@ function LoginForm() {
                       className="btn btn-primary btn-lg btn-block"
                       tabIndex={4}
                       style={{ fontSize: "16px" }}
+                      onClick={login}
                     >
                       {" "}
                       Login{" "}
