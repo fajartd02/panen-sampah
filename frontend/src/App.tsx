@@ -7,6 +7,7 @@ import Register from './components/Register';
 import Contact from './components/Contact';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
+import ServiceSection from './components/ServiceSection';
 
 function App() {
   const [id, setId] = useState(0);
@@ -67,6 +68,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contact" element={<Contact username={name}/>} />
+        <Route path="/service" element={<ServiceSection username={name}/>} />
       </Routes>
 
     </div>

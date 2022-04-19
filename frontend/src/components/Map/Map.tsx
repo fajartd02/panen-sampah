@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer";
 import Navbar from "../Navbar";
 import MapBox from "./MapBox";
 
@@ -12,11 +13,12 @@ function Map(props: MapInterface) {
     <>
       <Navbar username={username}/>
       <div className="container text-center">
-        <h1 className="fs-1 fw-bold" style={{marginTop: '10%', color: '#e65f52'}}>Map Distribution</h1>
-        <div className="center" style={{margin: '2% 20%'}}>
+        <h1 className="fs-1 fw-bold" style={{marginTop: '5%', color: '#e65f52'}}>Map Distribution</h1>
+        <div className="center" style={{margin: '2% 20%', marginBottom: '8%'}}>
           <MapBox width="50vw" height="50vh" />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
