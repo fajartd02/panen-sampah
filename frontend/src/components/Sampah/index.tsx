@@ -60,7 +60,7 @@ function Sampah(props: SampahInterface) {
             kaca: countKaca
         });
 
-        navigate('/success');
+        navigate('/successcheckout');
       } catch(err) {
           console.log(err);
       }
