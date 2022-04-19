@@ -84,7 +84,7 @@ function Emas(props: EmasInterface) {
                 <h5 className="card-title">Tukar Emas</h5>
                 <p className="card-text">Rp40.000 = 0.025gram emas</p>
                 <h5 style={{ marginTop: "10%", marginBottom: "10%" }}>
-                  Tukar Kaca x{countEmas} unit
+                  Tukar x{countEmas} unit
                 </h5>
                 <button
                   className="btn btn-primary"
